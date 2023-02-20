@@ -43,8 +43,6 @@ class SalesController extends Controller
     public function batch() {
         $batchId = request()->id;
         $batch = Bus::findBatch($batchId);
-        // $progress = $batch->progress;
-        // return $progress;
         return view('batch-progress', compact('batch'));
     }
 }
